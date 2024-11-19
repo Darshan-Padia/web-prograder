@@ -123,8 +123,8 @@ const CPPPracticePlatform = () => {
     setActiveTab('output');
 
     try {
-        const response = await fetch('http://localhost:5000/run-cpp', {
-            method: 'POST',
+      const response = await fetch('https://web-prograder-backend.onrender.com/run-cpp', {
+        method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ code, input: customInput }),
         });
@@ -152,8 +152,8 @@ const handleSubmitCode = async () => {
     setActiveTab('output');
 
     try {
-        const response = await fetch('http://localhost:5000/validate-code', {
-            method: 'POST',
+      const response = await fetch('https://web-prograder-backend.onrender.com/validate-code', {
+        method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ code, questionId }),
         });

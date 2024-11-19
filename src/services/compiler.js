@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const compileAndRun = async (code, input) => {
   try {
-    const response = await fetch('http://localhost:5000/run-cpp', {
+    const response = await fetch('https://web-prograder-backend.onrender.com/run-cpp', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
